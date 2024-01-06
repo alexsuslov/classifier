@@ -1,6 +1,9 @@
 package classifier
 
 import (
+	"encoding/csv"
+	"io"
+	"os"
 	"strings"
 )
 
@@ -29,4 +32,25 @@ func IsStopWord(v string) bool {
 // IsNotStopWord is the inverse function of IsStopWord
 func IsNotStopWord(v string) bool {
 	return !IsStopWord(v)
+}
+
+func LoadStopWords(filename string) error {
+	f, err := os.Open(filename)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	r := csv.NewReader(f)
+	for {
+		record, err := r.Read()
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
+			return err
+		}
+		stopwords[record[0]] = struct{}{}
+	}
+	return nil
 }
