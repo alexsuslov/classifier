@@ -8,7 +8,7 @@ General purpose text classifier (naïve bayes, k-nearest neighbors)
 ## Installation
 
 ```bash
-go get github.com/n3integration/classifier
+go get github.com/alexsuslov/classifier
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ package main
 import (
 	"fmt"
 	
-	"github.com/n3integration/classifier/naive"
+	"github.com/alexsuslov/classifier/naive"
 )
 
 func main() {

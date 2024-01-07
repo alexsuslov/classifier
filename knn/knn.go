@@ -9,8 +9,8 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/n3integration/classifier"
-	"github.com/n3integration/classifier/index"
+	"github.com/alexsuslov/classifier"
+	"github.com/alexsuslov/classifier/index"
 )
 
 const (

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/n3integration/classifier"
-	"github.com/n3integration/classifier/index"
+	"github.com/alexsuslov/classifier"
+	"github.com/alexsuslov/classifier/index"
 )
 
 // sparse matrix implementation

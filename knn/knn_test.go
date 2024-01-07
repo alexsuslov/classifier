@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/n3integration/classifier"
+	"github.com/alexsuslov/classifier"
 )
 
 func TestClassifier(t *testing.T) {
